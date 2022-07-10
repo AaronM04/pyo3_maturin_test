@@ -1,7 +1,7 @@
 PYO3 Maturin test
 =================
 
-To try out using Rust->Python bindings using PYO3 and Maturin.
+To try out using Rust-to-Python bindings using PYO3 and Maturin.
 
 Main reference: https://pyo3.rs/v0.16.4/#using-rust-from-python
 
@@ -27,6 +27,7 @@ maturin develop
 python3 -m venv venv
 source venv/bin/activate
 pip install -r requirements.txt
+maturin develop
 ```
 
 ## Recompile
