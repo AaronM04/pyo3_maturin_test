@@ -30,13 +30,13 @@ pip install -r requirements.txt
 maturin develop
 ```
 
-## Recompile
+# Recompile
 
 ```
 maturin develop
 ```
 
-## Jupyter Notebook support
+# Jupyter Notebook support
 
 ```
 ipython kernel install --user --name=venv
@@ -50,3 +50,10 @@ import pyo3_maturin_test
 ```
 
 Press Ctrl-Enter and there should not be an error displayed. No output is expected.
+
+## Edit-Recompile-Run loop in Jupyter Notebook
+
+1. Edit Rust code
+2. `maturin develop`
+3. In Jupyter Notebook, Kernel -> Restart & Run All
+4. Add new code cell(s)
