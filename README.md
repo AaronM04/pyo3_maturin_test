@@ -12,12 +12,13 @@ cargo new --bin pyo3_maturin_test
 cd pyo3_maturin_test
 python3 -m venv venv
 source venv/bin/activate
-pip install maturin
-maturin init
-# Write some Rust code in src/main.rs
+python -m pip install pip-tools
+# Edit requirements.in
+pip-compile --output-file=- > requirements.txt
+pip install -r requirements.txt
+maturin init -b pyo3                              # Actually the -b is untested
+# Write some Rust code in src/lib.rs
 maturin develop
-pip freeze > requirements.txt
-# Manual edits to remove pyo3_maturin_init and XXX
 ```
 
 # Setup
@@ -37,8 +38,6 @@ maturin develop
 ## Jupyter Notebook support
 
 ```
-source venv/bin/activate
-pip install ipython ipykernel
 ipython kernel install --user --name=venv
 jupyter-notebook   # Persistent shell
 ```
@@ -50,9 +49,3 @@ import pyo3_maturin_test
 ```
 
 Press Ctrl-Enter and there should not be an error displayed. No output is expected.
-
-## Other niceties
-
-```
-pip install jedi-language-server   # Vim Jedi LSP (I did ALE but there are other options)
-```
