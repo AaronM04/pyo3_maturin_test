@@ -57,3 +57,10 @@ Press Ctrl-Enter and there should not be an error displayed. No output is expect
 2. `maturin develop`
 3. In Jupyter Notebook, Kernel -> Restart & Run All
 4. Add new code cell(s)
+
+# About
+
+This repo is hosted at two locations:
+
+* https://git.sr.ht/~aaronm04/pyo3_maturin_test (main)
+* https://github.com/aaronm04/pyo3_maturin_test (mirror)
